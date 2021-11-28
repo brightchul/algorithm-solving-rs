@@ -10,7 +10,7 @@
 - if there is no rust and cargo, please refer [[here]](https://doc.rust-lang.org/book/ch01-01-installation.html)
 
 ```shell
-$ git clone https://github.com/brightchul/problemSolvingByRust
+$ git clone https://github.com/brightchul/algorithm-solving-rs.git
 
 # To run the p1052 code, type:
 $ cargo run -p p1052
