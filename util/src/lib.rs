@@ -1,5 +1,14 @@
 use std::{io, str::FromStr};
 
+pub fn input_string_vec() -> Vec<String> {
+    let input_str = input_string();
+    let string_vec = input_str
+        .split_whitespace()
+        .map(|v| v.to_string())
+        .collect();
+    return string_vec;
+}
+
 pub fn input_number_vec<T>() -> Vec<T>
 where
     T: FromStr,
