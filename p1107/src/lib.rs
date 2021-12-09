@@ -60,3 +60,50 @@ fn run(
         );
     }
 }
+
+pub fn solution2(target_string: String, error_num_list: Vec<i32>) -> i32 {
+    let target_num = target_string.parse::<i32>().unwrap();
+    if target_num == 100 {
+        return 0;
+    }
+
+    let mut result = 0;
+    for idx in 0..(target_num + 1) {
+        let upper_num = target_num + idx;
+        if check_num(upper_num, &error_num_list) {
+            result = get_len(upper_num) + idx;
+
+            break;
+        }
+
+        let lower_num = target_num - idx;
+
+        if check_num(lower_num, &error_num_list) {
+            result = get_len(lower_num) + idx;
+            break;
+        }
+    }
+    result.min((target_num - 100) as i32)
+}
+
+fn check_num(mut value: i32, err_num_list: &Vec<i32>) -> bool {
+    if err_num_list.contains(&value) {
+        return true;
+    }
+    while value > 0 {
+        if !err_num_list.contains(&(value % 10)) {
+            return false;
+        }
+        value /= 10;
+    }
+    return true;
+}
+
+fn get_len(mut value: i32) -> i32 {
+    let mut result = 1;
+    while value > 0 {
+        value /= 10;
+        result += 1;
+    }
+    result
+}
