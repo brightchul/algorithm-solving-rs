@@ -3,7 +3,7 @@ use p1107::solution1;
 type TestCase = (String, Vec<i32>, i32);
 
 #[test]
-fn solution1_text() {
+fn solution1_test() {
     let test_case_list: Vec<TestCase> = vec![
         (String::from("10"), vec![0, 1, 2, 3, 4, 5, 6, 7, 8], 2),
         (String::from("11"), vec![0, 1, 7, 9], 4),
