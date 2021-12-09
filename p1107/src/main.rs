@@ -1,4 +1,4 @@
-use p1107::solution1;
+use p1107::solution2;
 use util::{input_number, input_number_vec, input_string};
 
 fn main() {
@@ -10,5 +10,5 @@ fn main() {
         error_num_list = input_number_vec::<i32>();
     }
 
-    println!("{}", solution1(target_string, error_num_list));
+    println!("{}", solution2(target_string, error_num_list));
 }
