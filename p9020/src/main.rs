@@ -1,8 +1,9 @@
-use std::io::{self, Write};
+use std::{
+    io::{self, Write},
+    str::FromStr,
+};
 
-fn main() {
-    let mut sout = io::BufWriter::new(io::stdout());
-
+fn make_prime_vec() -> Vec<usize> {
     let mut num_arr = [true; 10001];
     let mut prime_vec: Vec<usize> = vec![];
 
@@ -22,32 +23,55 @@ fn main() {
             prime_vec.push(idx);
         }
     }
+    prime_vec
+}
 
+fn input_number<T>() -> T
+where
+    T: FromStr,
+{
     let mut buf = String::new();
     io::stdin().read_line(&mut buf).unwrap();
-    let len = buf.trim().parse::<usize>().unwrap();
+    if let Ok(result) = buf.trim().parse::<T>() {
+        return result;
+    }
+    panic!("invalid numberic string");
+}
+
+fn solution(target: usize, prime_vec: &Vec<usize>) -> (usize, usize) {
+    let idx = prime_vec.iter().position(|v| *v >= target / 2).unwrap();
+    let mut left = idx;
+    let mut right = idx;
+
+    while prime_vec[left] + prime_vec[right] != target {
+        if prime_vec[left] + prime_vec[right] < target {
+            right += 1;
+        } else {
+            left -= 1;
+        }
+    }
+
+    (prime_vec[left], prime_vec[right])
+}
+
+fn main() {
+    let mut sout = io::BufWriter::new(io::stdout());
+
+    let prime_vec: Vec<usize> = make_prime_vec();
+    let len = input_number::<usize>();
 
     for _ in 0..len {
-        buf = String::new();
-        io::stdin().read_line(&mut buf).unwrap();
-        let target = buf.trim().parse::<usize>().unwrap();
+        let target = input_number::<usize>();
+        let (left_value, right_value) = solution(target, &prime_vec);
 
-        let idx = prime_vec.iter().position(|v| *v >= target / 2).unwrap();
-        let mut left = idx;
-        let mut right = idx;
-
-        loop {
-            let total = prime_vec[left] + prime_vec[right];
-            if total == target {
-                break;
-            }
-            if total < target {
-                right += 1;
-            } else {
-                left -= 1;
-            }
-        }
-
-        writeln!(sout, "{} {}", prime_vec[left], prime_vec[right]).unwrap();
+        writeln!(sout, "{} {}", left_value, right_value).unwrap();
     }
+}
+
+#[test]
+fn solution_example_test() {
+    let prime_vec = make_prime_vec();
+    assert_eq!(solution(8, &prime_vec), (3, 5));
+    assert_eq!(solution(10, &prime_vec), (5, 5));
+    assert_eq!(solution(16, &prime_vec), (5, 11));
 }
