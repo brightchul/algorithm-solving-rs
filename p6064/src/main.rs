@@ -43,54 +43,39 @@ fn solution(m: i32, n: i32, x: i32, y: i32) -> i32 {
     if x == y {
         return x;
     }
-
     if m == n && x != y {
         return -1;
     }
 
-    let flag = m == cmp::min(m, n);
-    let amount = i32::abs(m - n);
+    let small = cmp::min(m, n);
+    let big = cmp::max(m, n);
 
-    let mut start_x = 1;
-    let mut start_y = 1;
+    let small_target = if m < n { x } else { y };
+    let big_target = if m < n { y } else { x };
 
-    if flag {
-        start_y = if x < y { 1 + y - x } else { n + 1 + y - x };
-    } else {
-        start_x = if x > y { 1 + x - y } else { m + 1 + x - y };
+    let mut target_start = 1 + big_target - small_target;
+    if target_start <= 0 {
+        target_start += big;
     }
 
-    let mut start_m = 1;
-    let mut start_n = 1;
+    let amount = i32::abs(m - n);
+
+    let mut big_start = 1;
     let mut count = 0;
 
     loop {
-        if flag {
-            start_n -= amount;
-            if start_n <= 0 {
-                start_n += n;
-            }
+        count += small;
+        big_start -= amount;
 
-            count += m;
-        } else {
-            start_m -= amount;
-            if start_m <= 0 {
-                start_m += m;
-            }
-
-            count += n;
+        if big_start <= 0 {
+            big_start += big;
         }
 
-        if start_m == start_x && start_n == start_y {
-            if flag {
-                count += x
-            } else {
-                count += y
-            };
-            return count;
+        if big_start == target_start {
+            return count + small_target;
         }
 
-        if start_m == 1 && start_n == 1 {
+        if big_start == 1 {
             return -1;
         }
     }
