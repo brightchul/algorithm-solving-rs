@@ -1,0 +1,884 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'util'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=util"
+        ],
+        "filter": {
+          "name": "util",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'p1011'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=p1011"
+        ],
+        "filter": {
+          "name": "p1011",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p1011'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p1011",
+          "--package=p1011"
+        ],
+        "filter": {
+          "name": "p1011",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p1011'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p1011",
+          "--package=p1011"
+        ],
+        "filter": {
+          "name": "p1011",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'p1038'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=p1038"
+        ],
+        "filter": {
+          "name": "p1038",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p1038'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p1038",
+          "--package=p1038"
+        ],
+        "filter": {
+          "name": "p1038",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p1038'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p1038",
+          "--package=p1038"
+        ],
+        "filter": {
+          "name": "p1038",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug integration test 'solution_test'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--test=solution_test",
+          "--package=p1038"
+        ],
+        "filter": {
+          "name": "solution_test",
+          "kind": "test"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'p1052'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=p1052"
+        ],
+        "filter": {
+          "name": "p1052",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p1052'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p1052",
+          "--package=p1052"
+        ],
+        "filter": {
+          "name": "p1052",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p1052'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p1052",
+          "--package=p1052"
+        ],
+        "filter": {
+          "name": "p1052",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug integration test 'solution_test'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--test=solution_test",
+          "--package=p1052"
+        ],
+        "filter": {
+          "name": "solution_test",
+          "kind": "test"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'p1068'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=p1068"
+        ],
+        "filter": {
+          "name": "p1068",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p1068'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p1068",
+          "--package=p1068"
+        ],
+        "filter": {
+          "name": "p1068",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p1068'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p1068",
+          "--package=p1068"
+        ],
+        "filter": {
+          "name": "p1068",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug integration test 'solution_test'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--test=solution_test",
+          "--package=p1068"
+        ],
+        "filter": {
+          "name": "solution_test",
+          "kind": "test"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'p1107'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=p1107"
+        ],
+        "filter": {
+          "name": "p1107",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p1107'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p1107",
+          "--package=p1107"
+        ],
+        "filter": {
+          "name": "p1107",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p1107'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p1107",
+          "--package=p1107"
+        ],
+        "filter": {
+          "name": "p1107",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug integration test 'solution_test'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--test=solution_test",
+          "--package=p1107"
+        ],
+        "filter": {
+          "name": "solution_test",
+          "kind": "test"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'p1759'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=p1759"
+        ],
+        "filter": {
+          "name": "p1759",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p1759'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p1759",
+          "--package=p1759"
+        ],
+        "filter": {
+          "name": "p1759",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p1759'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p1759",
+          "--package=p1759"
+        ],
+        "filter": {
+          "name": "p1759",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in library 'p1992'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--lib",
+          "--package=p1992"
+        ],
+        "filter": {
+          "name": "p1992",
+          "kind": "lib"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p1992'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p1992",
+          "--package=p1992"
+        ],
+        "filter": {
+          "name": "p1992",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p1992'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p1992",
+          "--package=p1992"
+        ],
+        "filter": {
+          "name": "p1992",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug integration test 'solution_test'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--test=solution_test",
+          "--package=p1992"
+        ],
+        "filter": {
+          "name": "solution_test",
+          "kind": "test"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p2609'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p2609",
+          "--package=p2609"
+        ],
+        "filter": {
+          "name": "p2609",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p2609'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p2609",
+          "--package=p2609"
+        ],
+        "filter": {
+          "name": "p2609",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p9020'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p9020",
+          "--package=p9020"
+        ],
+        "filter": {
+          "name": "p9020",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p9020'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p9020",
+          "--package=p9020"
+        ],
+        "filter": {
+          "name": "p9020",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p6064'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p6064",
+          "--package=p6064"
+        ],
+        "filter": {
+          "name": "p6064",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p6064'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p6064",
+          "--package=p6064"
+        ],
+        "filter": {
+          "name": "p6064",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p11051'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p11051",
+          "--package=p11051"
+        ],
+        "filter": {
+          "name": "p11051",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p11051'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p11051",
+          "--package=p11051"
+        ],
+        "filter": {
+          "name": "p11051",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p1932'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p1932",
+          "--package=p1932"
+        ],
+        "filter": {
+          "name": "p1932",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p1932'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p1932",
+          "--package=p1932"
+        ],
+        "filter": {
+          "name": "p1932",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p2805'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p2805",
+          "--package=p2805"
+        ],
+        "filter": {
+          "name": "p2805",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p2805'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p2805",
+          "--package=p2805"
+        ],
+        "filter": {
+          "name": "p2805",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p8983'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p8983",
+          "--package=p8983"
+        ],
+        "filter": {
+          "name": "p8983",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p8983'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p8983",
+          "--package=p8983"
+        ],
+        "filter": {
+          "name": "p8983",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p2110'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p2110",
+          "--package=p2110"
+        ],
+        "filter": {
+          "name": "p2110",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p2110'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p2110",
+          "--package=p2110"
+        ],
+        "filter": {
+          "name": "p2110",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p1920'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p1920",
+          "--package=p1920"
+        ],
+        "filter": {
+          "name": "p1920",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p1920'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p1920",
+          "--package=p1920"
+        ],
+        "filter": {
+          "name": "p1920",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'p2230'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=p2230",
+          "--package=p2230"
+        ],
+        "filter": {
+          "name": "p2230",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'p2230'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=p2230",
+          "--package=p2230"
+        ],
+        "filter": {
+          "name": "p2230",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
