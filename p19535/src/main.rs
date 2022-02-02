@@ -1,4 +1,7 @@
-use std::{collections::HashSet, io};
+use std::{
+    collections::{HashSet, VecDeque},
+    io,
+};
 
 fn input_number() -> i64 {
     let mut buf = String::new();
@@ -15,6 +18,11 @@ fn input_number_vector() -> (i64, i64) {
         split.next().unwrap().parse::<i64>().unwrap(),
         split.next().unwrap().parse::<i64>().unwrap(),
     )
+}
+
+struct ParentChild {
+    parent: Option<i64>,
+    child: i64,
 }
 
 fn main() {
@@ -38,7 +46,39 @@ fn main() {
     let mut visited: [bool; 300001] = [false; 300001];
     let mut result = [0, 0];
 
-    recur(0, start, &tree, &mut visited, &mut result);
+    let mut queue = VecDeque::<ParentChild>::new();
+    queue.push_back(ParentChild {
+        parent: None,
+        child: start,
+    });
+
+    while queue.len() > 0 {
+        let one = queue.pop_front().unwrap();
+        let child = one.child;
+
+        visited[child as usize] = true;
+
+        if let Some(parent) = one.parent {
+            result[0] +=
+                (tree[parent as usize].len() as i64 - 1) * (tree[child as usize].len() as i64 - 1);
+        }
+
+        let len = tree[child as usize].len() as i64;
+        if len >= 3 {
+            result[1 as usize] += len * (len - 1) * (len - 2) / 6;
+        }
+
+        for &child_num in &tree[child as usize] {
+            if visited[child_num as usize] {
+                continue;
+            }
+            queue.push_back(ParentChild {
+                parent: Some(child),
+                child: child_num,
+            })
+        }
+    }
+
     let [d, g] = result;
 
     if d < g * 3 {
@@ -47,32 +87,5 @@ fn main() {
         println!("DUDUDUNGA");
     } else {
         println!("D");
-    }
-}
-
-fn recur(
-    parent: i64,
-    target: i64,
-    tree: &Vec<HashSet<i64>>,
-    visited: &mut [bool],
-    result: &mut [i64],
-) {
-    visited[target as usize] = true;
-
-    if parent > 0 {
-        result[0] +=
-            (tree[parent as usize].len() as i64 - 1) * (tree[target as usize].len() as i64 - 1);
-    }
-
-    if tree[target as usize].len() >= 3 {
-        let len = tree[target as usize].len() as i64;
-        result[1 as usize] += len * (len - 1) * (len - 2) / 6;
-    }
-
-    for &one in &tree[target as usize] {
-        if visited[one as usize] {
-            continue;
-        }
-        recur(target, one, &tree, visited, result);
     }
 }
